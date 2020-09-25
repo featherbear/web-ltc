@@ -11,6 +11,6 @@
 </style>
 
 <div class="menubar">
-  <Entry id="home" on:click>Home</Entry>
-  <Entry id="about" on:click>About</Entry>
+  <Entry path="" on:click>Home</Entry>
+  <Entry path="about" on:click>About</Entry>
 </div>

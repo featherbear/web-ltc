@@ -1,10 +1,20 @@
 <script>
-  import Router from "svelte-spa-router";
   import Menubar from "./components/Menubar/Menubar.svelte";
 
+  /* Routing */
+  import Router, {push} from "svelte-spa-router";
+  
+  import PageHome from "./routes/Home.svelte";
+  import PageAbout from "./routes/About.svelte";
+
   function handleAction(action) {
-    alert("Action " + action);
+	push(`/${action}`)
   }
+
+  const routes = {
+	"/": PageHome,
+	"/about": PageAbout
+  };
 </script>
 
 <style lang="scss">
@@ -29,7 +39,7 @@
 
 <div class="mainContainer">
   <main>
-    <!-- <Router {routes} /> -->
+    <Router {routes} />
   </main>
   <footer>
     <Menubar on:click={({ detail: action }) => handleAction(action)} />

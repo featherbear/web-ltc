@@ -1,13 +1,13 @@
 <script>
-  // Usage: <Entry id="id">Name</Entry>
+  // Usage: <Entry path="path">Name</Entry>
 
-  export let id;
+  export let path;
 
   import { createEventDispatcher } from "svelte";
   const dispatch = createEventDispatcher();
 </script>
 
-<style>
+<style lang="scss">
   span {
     min-width: 200px;
     cursor: pointer;
@@ -20,4 +20,4 @@
   }
 </style>
 
-<span on:click={() => dispatch('click', id)}><slot /></span>
+<span on:click={() => dispatch('click', path)}><slot /></span>
