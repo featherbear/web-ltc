@@ -29,6 +29,7 @@
 
 <div class="mainContainer">
   <main>
+    <!-- <Router {routes} /> -->
   </main>
   <footer>
     <Menubar on:click={({ detail: action }) => handleAction(action)} />
